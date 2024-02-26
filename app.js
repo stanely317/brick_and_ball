@@ -50,7 +50,7 @@ canvas.addEventListener("mousemove", (e) => {
   ground_x = e.clientX; // 設定地板跟隨滑鼠移動
 });
 
-function drawCircle() {
+function draw() {
   // 確認球是否有打到磚塊
   brickArray.forEach((brick) => {
     if (brick.checkHitting(circle_x, circle_y) && brick.visible) {
@@ -131,4 +131,4 @@ function drawCircle() {
   ctx.fill();
 }
 
-let game = setInterval(drawCircle, 30);
+let game = setInterval(draw, 30);
